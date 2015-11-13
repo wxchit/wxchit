@@ -1,0 +1,19 @@
+<title>Add book</title>
+</head>
+
+<body>
+<a href="/search/">return</a>
+<form action="/add/" method="post">
+{% csrf_token %}
+<tr>
+<td><p><b>ISBN</b></p><input name="isbn" type="text"></td>
+<td><p><b>Title</b></p><input name="title" type="text"></td>
+<td><p><b>AuthorID</b></p><input name="authorid" type="text"></td>
+<td><p><b>Publisher</b></p><input name="publisher" type="text"></td>
+<td><p><b>PublishDate</b></p><input name="publishdate" type="text"></td>
+<td><p><b>Price</b></p><input name="price" type="text"></td>
+<td><input type="submit" value="submit"></td>
+</tr>
+</form>
+</body>
+</html>

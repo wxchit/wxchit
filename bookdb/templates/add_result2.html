@@ -1,0 +1,16 @@
+<title>Add author</title>
+</head>
+
+<body>
+<a href="/search/">return</a>
+<form method="post">
+{% csrf_token %}
+<tr>
+<td><p><b>Name</b></p><input name="name" type="text" size="50"></td>
+<td><p><b>Age</b></p><input name="age" type="text" size="50"></td>
+<td><p><b>Country</b></p><input name="country" type="text" size="50"></td>
+<td><input type="submit" value="submit"></td>
+</tr>
+</form>
+</body>
+</html>

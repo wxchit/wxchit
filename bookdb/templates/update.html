@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Update</title>
+</head>
+
+<body>
+<a href="/search/">return</a>
+<form method="post">
+{% csrf_token %}
+<tr>
+<td><p><b>AuthorID</b></p><input name="authorid" value={{bk.AuthorID}} type="text" size="50"></td>
+<td><p><b>Publisher</b></p><input name="publisher" value={{bk.Publisher}} type="text" size="50"></td>
+<td><p><b>PublishDate</b></p><input name="publishdate" value={{bk.PublishDate|date:"Y-m-d"}} type="text" size="50"></td>
+<td><p><b>Price</b></p><input name="price" value={{bk.Price}} type="text" size="50"></td>
+<td><input type="submit" value="submit"></td>
+</tr>
+</form>
+</body>
+</html>

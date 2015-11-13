@@ -1,0 +1,25 @@
+<div>
+	{% if tag == 1 %}
+		<b>Here is the result:</b>
+		<table border="0" cellspacing="30">
+		<tr>
+		<th>book name</th>
+		<th>delete</th>
+		<th>edit</th>
+		</tr>
+		
+		{% for item in book %}
+		<tr>
+			<td><a href = "/views/?isbn={{item.ISBN}}">{{item.Title}}</a></td>
+			<td><a href = "/delete/?isbn={{item.ISBN}}">delete</a></td>
+			<td><a href = "/update/?isbn={{item.ISBN}}">edit</a></td>
+		</tr>
+		{% endfor %}
+		</table>
+	
+	{% else %}
+		<b>no such books.</b>
+	{% endif %}
+</div>
+<a href="/search/">return</a>
+
